@@ -28,6 +28,10 @@
       <Private>false</Private>
     </Reference>
 
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>$(ManagedPath)\Il2Cppmscorlib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>$(ManagedPath)\Assembly-CSharp.dll</HintPath>
       <Private>false</Private>
