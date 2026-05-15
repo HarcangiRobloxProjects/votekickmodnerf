@@ -15,50 +15,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="BepInEx.Core">
-      <HintPath>$(CorePath)\BepInEx.Core.dll</HintPath>
+    <Reference Include="$(CorePath)\*.dll">
       <Private>false</Private>
     </Reference>
-    <Reference Include="BepInEx.Unity.IL2CPP">
-      <HintPath>$(CorePath)\BepInEx.Unity.IL2CPP.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="0Harmony">
-      <HintPath>$(CorePath)\0Harmony.dll</HintPath>
+    
+    <Reference Include="Il2CppInterop.Common" Condition="Exists('$(CorePath)\Il2CppInterop.Common.dll')">
+      <HintPath>$(CorePath)\Il2CppInterop.Common.dll</HintPath>
       <Private>false</Private>
     </Reference>
 
-    <Reference Include="Il2Cppmscorlib">
-      <HintPath>$(ManagedPath)\Il2Cppmscorlib.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>$(ManagedPath)\Assembly-CSharp.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="Hazel">
-      <HintPath>$(ManagedPath)\Hazel.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-
-    <Reference Include="UnityEngine">
-      <HintPath>$(ManagedPath)\UnityEngine.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>$(ManagedPath)\UnityEngine.CoreModule.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>$(ManagedPath)\UnityEngine.IMGUIModule.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>$(ManagedPath)\UnityEngine.InputLegacyModule.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="UnityEngine.Physics2DModule">
-      <HintPath>$(ManagedPath)\UnityEngine.Physics2DModule.dll</HintPath>
+    <Reference Include="$(ManagedPath)\*.dll">
       <Private>false</Private>
     </Reference>
   </ItemGroup>
